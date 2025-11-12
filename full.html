@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Friends Forever</title>
+        <style>
+
+            #animated-box{
+
+                margin-top: 100px;
+                margin-left: 100px;
+                width:70px;
+                height: 70px;
+                animation: spin 17.5s infinite linear;
+                background-color: rgb(255, 145, 0);
+
+            }
+            @keyframes spin {
+                
+            
+                
+            
+
+     from {transform:rotate(0deg);}
+     to         {transform:rotate(360deg);}
+            }
+              i{
+                    color:rgb(10, 0, 97)
+                }
+                result{
+                    color:brown
+                }
+                video {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      width: 300px;
+      height: auto;
+      border: 2px solid #00b7ff;
+      border-radius: 8px;
+    }
+           body{
+
+      background-image: url('https://thumbs.dreamstime.com/b/teamwork-group-friends-logo-image-holding-each-other-39918563.jpg'); 
+      background-size: cover; 
+      background-position: center; 
+      background-repeat: no-repeat; 
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: rgb(17, 0, 255);
+      align-items: center;
+      text-align: center;
+      
+
+    }
+       
+            
+h1{
+
+    color:rgb(255, 126, 6)
+
+}
+h1:hover{
+    color:aqua
+}
+
+
+h3{
+    color:rgb(6, 221, 35)
+}
+
+h2{
+
+    color:rgb(243, 7, 54)
+    
+}
+
+button {
+      background-color: #4CAF50; 
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+        hr{
+
+            color:rgb(221, 10, 10)
+        }
+        p{
+            color:rgb(132, 33, 214);
+            font-size: 24px
+        }
+        p:hover{
+            color:crimson
+        }
+        
+        </style>
+    </head>
+    <body>
+        <center><h1><bold>Best Friends Forever</bold></h1></center>
+        <br>
+        <br>
+        <br><p style="text-shadow: 2px 2px 4px rgb(37, 37, 37);">"Friends are the people who bring joy, support, and meaning to our lives. They stand by us through good times and bad, offering encouragement when we struggle and sharing in our happiness when we succeed. True friendship is built on trust, understanding, and respect—it allows us to be ourselves without fear of judgment. Friends make ordinary moments special and help us see the world in new ways. Whether near or far, they remind us that we are never truly alone, and their presence makes life’s journey more beautiful and fulfilling."</p>
+        <br>
+        <br><center><h2><b style="text-shadow: 2px 2px 4px gray;", style=" color: #ff0000; text-shadow: 0 0 10px #ff0000;">FRIEND GROUP:</b></h2></center>
+        <br>
+        <br><center><h3><i style="text-shadow: 2px 2px 4px rgb(172, 172, 172);">Ayan Paracha, Sayyed Ibrahim K., Ayan Allaudin, Roman Ali, Turab K., Zohaib Imran, Haris Imran, Safi, Haseeb, A.Hadi, Huzaifa, Hassan S., Hassan Z., Rayyan Sultan A.!</i></h3></center>
+        <br><center><div style="text-shadow: 2px 2px 4px gray;",style= "color: gold ; text-shadow: 0 0 7.5px gold;", id="animated-box"></div></center>
+        <br>  <h2 style="text-shadow: 2px 2px 4px gray;">Guess No. of friends!</h2>
+
+  <label style="text-shadow: 2px 2px 4px gray;", for="marks">Enter the no. of friends: </label>
+    <input type="number" id="marks" min="0" max="20">
+  <button onclick="checkGrade()">Check Answer</button>
+  <br>
+  <br>
+  <br><i><b style="text-shadow: 2px 2px 4px gray;">**Hint**: count the number of friends from the "friend group" list!</b></i>
+
+  <p style="text-shadow: 2px 2px 4px gray;", id="result"></p>
+
+        <script>
+            function checkGrade() {
+            var marks= document.getElementById("marks").value;
+            var result= "";
+
+            if (marks >= 15 && marks <= 20) {result  = "Uhmm!, check no. of friends from the list once again.";}
+            else if (marks >= 14 && marks <= 14) {result = "Successfuly, you passed the test!, you are an absolute genius!";} 
+            else if (marks >= 13 && marks <= 13) {result = "Very Very Close, (hint: add +1 to 13, and also dont tell anyone!)";} 
+            else if (marks >= 0 && marks <= 12) {result = "Uhmm!, check no. of friends from the list once again.";}
+   
+        document.getElementById("result").innerText = result;
+            }
+            
+        </script>
+    </body>
+</html>
