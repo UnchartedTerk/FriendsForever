@@ -100,6 +100,8 @@ button {
         p:hover{
             color:crimson
         }
+            #colorText {
+      transition: color 1s ease;
         
         </style>
     </head>
@@ -111,7 +113,7 @@ button {
         <br>
         <br><center><h2><b style="text-shadow: 2px 2px 4px gray;", style=" color: #ff0000; text-shadow: 0 0 10px #ff0000;">FRIEND GROUP:</b></h2></center>
         <br>
-        <br><center><h3><i style="text-shadow: 2px 2px 4px rgb(172, 172, 172);">Ayan Paracha, Sayyed Ibrahim K., Ayan Allaudin, Roman Ali, Turab K., Zohaib Imran, Haris Imran, Safi, Haseeb, A.Hadi, Huzaifa, Hassan S., Hassan Z., Rayyan Sultan A.!</i></h3></center>
+        <br><center><h3><i style="text-shadow: 2px 2px 4px rgb(172, 172, 172);">Ayan Paracha, Sayyed Ibrahim K., Ayan Allaudin, Roman Ali, <b>Turab Khan</b>., Zohaib Imran, <b>Haris Amjad</b>, Safi, Haseeb, A.Hadi, Huzaifa, Hassan S., Hassan Z., Rayyan Sultan A.!</i></h3></center>
         <br><center><div style="text-shadow: 2px 2px 4px gray;",style= "color: gold ; text-shadow: 0 0 7.5px gold;", id="animated-box"></div></center>
         <br>  <h2 style="text-shadow: 2px 2px 4px gray;">Guess No. of friends!</h2>
 
@@ -123,7 +125,9 @@ button {
   <br><i><b style="text-shadow: 2px 2px 4px gray;">**Hint**: count the number of friends from the "friend group" list!</b></i>
 
   <p style="text-shadow: 2px 2px 4px gray;", id="result"></p>
-
+        <br>
+        <br><div id="colorText">"300 schwarze Männer für 2 Euro"</div>
+<br><div id="colorText"><i>-Hassan Shoaib</i></div>
         <script>
             function checkGrade() {
             var marks= document.getElementById("marks").value;
@@ -136,8 +140,20 @@ button {
    
         document.getElementById("result").innerText = result;
             }
+            const text = document.getElementById('colorText');
+
+    function changeColor() {
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      text.style.color = `rgb(${r}, ${g}, ${b})`;
+    }
+
+    // Change color every 2 seconds
+    setInterval(changeColor, 2000);
             
         </script>
     </body>
 </html>
+
 
